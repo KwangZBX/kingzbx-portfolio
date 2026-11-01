@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KINGZBX | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -20,32 +23,34 @@
 
   <main>
 
-<section id="contact" class="contact">
-  <p class="section-label">GET IN TOUCH</p>
 
-  <h2>Let's Connect.</h2>
 
-  <p>
-    สนใจร่วมงานหรือพูดคุยเกี่ยวกับเว็บไซต์
-    สามารถติดต่อฉันได้ที่นี่
-  </p>
 
-  <a href="https://github.com/KwangZBX"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="contact-btn">
-    Visit My GitHub
-  </a>
-</section>
+<section class="hero">
+  <div class="hero-content">
+    <p class="section-label">HELLO, WORLD</p>
 
-    <section class="hero">
-      <p>HELLO, WORLD</p>
-      <h1>ฉันคือ KINGZBX</h1>
-      <h2>Future Web Developer</h2>
-      <p>กำลังเรียนรู้การสร้างเว็บไซต์ด้วยโค้ด</p>
+    <h1>ฉันคือ KINGZBX</h1>
+
+    <h2>Future Web Developer</h2>
+
+    <p>กำลังเรียนรู้การสร้างเว็บไซต์ด้วยโค้ด</p>
+
+    <div class="hero-buttons">
+      <a href="#projects" class="contact-btn">
+        View My Projects
+      </a>
+
       <button id="hello-btn">ทักทายฉัน</button>
-      <p id="message"></p>
-    </section>
+    </div>
+
+    <p id="message"></p>
+  </div>
+
+  <div class="hero-image">
+    <img src="profile.jpg" alt="KINGZBX Profile">
+  </div>
+</section>
 
     
 <section id="about" class="about">
@@ -63,36 +68,66 @@
   </p>
 </section>
 
+
 <section id="skills" class="skills">
   <p class="section-label">WHAT I WORK WITH</p>
 
-  <h2>My Skills</h2>
+  <h2>My Technical Skills</h2>
+
+  <p class="skills-intro">
+    Technologies and tools I'm currently learning.
+  </p>
 
   <div class="skills-grid">
+
     <div class="skill-card">
-      <h3>HTML</h3>
+      <div class="skill-heading">
+        <h3>HTML</h3>
+        <span>Learning</span>
+      </div>
       <p>Website Structure</p>
+      <div class="skill-bar">
+        <div class="skill-progress html-progress"></div>
+      </div>
     </div>
 
     <div class="skill-card">
-      <h3>CSS</h3>
+      <div class="skill-heading">
+        <h3>CSS</h3>
+        <span>Learning</span>
+      </div>
       <p>Website Styling</p>
+      <div class="skill-bar">
+        <div class="skill-progress css-progress"></div>
+      </div>
     </div>
 
     <div class="skill-card">
-      <h3>JavaScript</h3>
+      <div class="skill-heading">
+        <h3>JavaScript</h3>
+        <span>Learning</span>
+      </div>
       <p>Website Interaction</p>
+      <div class="skill-bar">
+        <div class="skill-progress js-progress"></div>
+      </div>
     </div>
 
     <div class="skill-card">
-      <h3>Python</h3>
+      <div class="skill-heading">
+        <h3>Python</h3>
+        <span>Learning</span>
+      </div>
       <p>Programming</p>
+      <div class="skill-bar">
+        <div class="skill-progress python-progress"></div>
+      </div>
     </div>
+
   </div>
 </section>
 
 
-    
 <section id="projects" class="projects">
   <p class="section-label">MY RECENT WORK</p>
 
@@ -101,24 +136,138 @@
   <div class="projects-grid">
 
     <div class="project-card">
-      <p class="project-number">01 / PORTFOLIO</p>
-      <h3>Personal Portfolio</h3>
-      <p>เว็บไซต์แนะนำตัวและแสดงผลงาน
-      ที่สร้างด้วย HTML, CSS และ JavaScript</p>
-      <span>HTML · CSS · JavaScript</span>
+    <p class="project-number">01 / FEATURED PROJECT</p>
+
+    <div class="project-preview">
+        <span> KINGZBX.DEV </span>
+        <h3>PERSONAL PORTFOLIO</h3>
+        <p>Creative Developer Portfolio</p>
     </div>
 
-    <div class="project-card">
-      <p class="project-number">02 / COMING SOON</p>
-      <h3>Future Project</h3>
-      <p>โปรเจกต์ใหม่ของ KINGZBX
-      กำลังอยู่ระหว่างการพัฒนา</p>
-      <span>Coming Soon</span>
+    <h3>Personal Portfolio</h3>
+
+    <p>
+        เว็บไซต์แนะนำตัวและนำเสนอผลงาน
+        พัฒนาด้วย HTML, CSS และ JavaScript
+    </p>
+
+    <div class="project-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
     </div>
+
+    <div class="project-links">
+        <a href="https://kwangzbx.github.io/kingzbx-portfolio/"
+           target="_blank"
+           rel="noopener noreferrer">Live Demo ↗</a>
+
+        <a href="https://github.com/KwangZBX/kingzbx-portfolio"
+           target="_blank"
+           rel="noopener noreferrer">Source Code ↗</a>
+    </div>
+</div>
+
+<div class="project-card">
+    <p class="project-number">02 / COMING SOON</p>
+
+    <div class="project-preview future-preview">
+        <span> KINGZBX LAB </span>
+        <h3>NEW PROJECT</h3>
+        <p>Something is coming...</p>
+    </div>
+
+    <h3>Future Project</h3>
+
+    <p>
+        โปรเจกต์ใหม่ของ KINGZBX
+        กำลังอยู่ระหว่างการพัฒนา
+    </p>
+
+    <div class="project-tags">
+        <span>In Development</span>
+    </div>
+
+    <div class="project-links">
+        <span class="coming-soon">Coming Soon</span>
+    </div>
+</div>
 
   </div>
 </section>
+<section id="contact" class="contact">
+  <p class="section-label">GET IN TOUCH</p>
+
+  <h2>Let's Connect.</h2>
+
+  <p>
+    สนใจร่วมงานหรือพูดคุยเกี่ยวกับเว็บไซต์
+    สามารถติดต่อฉันได้ที่นี่
+  </p>
+
+  
+<div class="social-links">
+
+    <a href="https://github.com/KwangZBX"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="social-btn">
+        GitHub ↗
+    </a>
+
+    <a href="resume.pdf"
+       download
+       class="social-btn resume-btn">
+        Download Resume ↓
+    </a>
+
+</div>
+
+</section>
+
+<section class="contact-form">
+  <h2>Send Me a Message</h2>
+  <p>Have a project in mind? Let's talk.</p>
+
+  <form id="contact-form">
+    <input
+      type="text"
+      name="user_name"
+      placeholder="Your Name"
+      required
+    >
+
+    <input
+      type="email"
+      name="user_email"
+      placeholder="Your Email"
+      required
+    >
+
+    <textarea
+      name="message"
+      placeholder="Your Message"
+      rows="5"
+      required
+    ></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
 
   </main>
+
+<footer class="footer">
+  <p>© 2026 KINGZBX. All Rights Reserved.</p>
+
+  <a href="#">Back to Top ↑</a>
+
+  <a href="https://github.com/KwangZBX"
+     target="_blank"
+     rel="noopener noreferrer">
+    GitHub
+  </a>
+</footer>
+
 </body>
 </html>
